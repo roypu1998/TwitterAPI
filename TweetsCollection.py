@@ -5,11 +5,11 @@ import csv
 App Name = TweetCollect_karin_roi
 '''
 
-consumer_key='xvyJ2qK09KL4VPqeWlvcmLT7y'
-consumer_secret='PUfNF2VtdkIAAKy7xpoJcdXkjyHm8pnNQnZZwXkWdCS9kGjfEm'
-access_token='1462773831932825601-Y3QKjfBA1vzuG7u9A5ivp2z1MhUf0Z'
-access_token_secret='dL1yrGknTLQnD33AFntm6PSNro09x4oJnmb11IppRa2ai'
-bearer_token='AAAAAAAAAAAAAAAAAAAAAC5FWAEAAAAAuFvhytDv9%2F93gRviSEJd7mZv4IU%3DrJrR1XRCPxckWpUWRBZQLBuPX2Pe906oL1YU72LSWDpzeQXTsk'
+consumer_key='<REPLACE_ME>'
+consumer_secret='<REPLACE_ME>'
+access_token='<REPLACE_ME>'
+access_token_secret='<REPLACE_ME>'
+bearer_token='<REPLACE_ME>'
 
 auth=tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
@@ -24,7 +24,7 @@ except:
     print("Error during authentication")
 
 
-def search_tweets():
+def to_csv_file():
     file = open('tweets.csv', 'w',encoding="utf-8", newline='')
     with file:
         # identifying header
@@ -47,7 +47,7 @@ def return_tweets(word):
             count+=1
     return ls
 
-search_tweets()
+to_csv_file()
 
 
 
